@@ -44,16 +44,9 @@ let gameData = {
     Output: "Iron Warrior"
 */
 function toTitleCase(name) {
-  // Split the name into an array of words
-  const words = name.split(" ");
-  
-  // Capitalize the first letter of each word
-  const capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
-  
-  // Join the words back to form the title-cased name
-  const titleCaseName = capitalizedWords.join(" ");
-  
-  return titleCaseName;
+  return name.split(' ')
+             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+             .join(' ');
 }
 
 const inputName = "iron warrior";
