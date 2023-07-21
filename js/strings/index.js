@@ -53,3 +53,23 @@ const inputName = "iron warrior";
 const outputName = toTitleCase(inputName);
 console.log(outputName);
 // Output: "Iron Warrior"
+
+//-----------------------------------------------------------------------------
+/*
+2. Item Search: Write a function, searchInventory(inventory, query) , that takes in an
+array of inventory item names and a string search query. The function should return a new
+array with only the items that contain the query string.
+Input: ["Iron Sword", "Healing Potion", "Steel Shield"], "Iron"
+Output: ["Iron Sword"]
+*/
+function searchInventory(inventory, query) {
+  //the filter method It is used to create a new array containing elements from the original array that satisfy a specified condition. The filter() method does not modify the original array; instead, it returns a new array with the filtered elements.
+  const result = inventory.filter(item => item.toLowerCase().includes(query.toLowerCase()));
+  return result ; 
+}
+  const inventory = ["Iron Sword", "Healing Potion", "Steel Shield"];
+  const query = "Iron";
+  const output = searchInventory(inventory, query);
+  console.log(output);
+
+  //---------------------------------------------------------------------------
